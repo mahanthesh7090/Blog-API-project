@@ -1,0 +1,1917 @@
+{
+	"info": {
+		"_postman_id": "bfae9a9a-86c9-4f4b-9484-4d1123e691fc",
+		"name": "Blog REST API – Internship Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50480546",
+		"_collection_link": "https://mahantheshhr51-7340076.postman.co/workspace/Mahanthesh's-Workspace~7b039052-2998-44d0-8636-7c010d1c32ca/collection/50480546-bfae9a9a-86c9-4f4b-9484-4d1123e691fc?action=share&source=collection_link&creator=50480546"
+	},
+	"item": [
+		{
+			"name": "User Authentications by jwt",
+			"item": [
+				{
+					"name": "New user registration",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\",\r\n  \"email\": \"mahan@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"register",
+								""
+							]
+						},
+						"description": "**Summary**  \nUser registration endpoint for the Blog REST API – Internship Project.\n\n---\n\nThis endpoint creates a new user account in the Blog REST API. Use it when a new user signs up and you want to store their credentials (username and password) along with their email address. On success, it returns the created user’s public details.\n\n---\n\n## Request\n\n- **Method:** `POST`\n- **URL:** `http://127.0.0.1:8000/register/`\n\n### Required Headers\n- `Content-Type: application/json`\n\n### Request Body (JSON)\n\n```json\n{\n  \"username\": \"mahan\",\n  \"password\": \"mahan@123\",\n  \"email\": \"mahan@example.com\"\n}\n```\n\n**Fields**\n- `username` (`string`, required) – Unique username for the new user.  \n  Example: `\"mahan\"`\n- `password` (`string`, required) – Password for the new user account.  \n  Example: `\"mahan@123\"`\n- `email` (`string`, required) – Email address of the user.  \n  Example: `\"mahan@example.com\"`\n\n---\n\n## Response\n\n### 201 Created\nReturned when the user is successfully registered.\n\n**Sample Response Body**\n\n```json\n{\n  \"username\": \"mahan\",\n  \"email\": \"mahan@example.com\"\n}\n```\n\nThe password is not returned in the response for security reasons."
+					},
+					"response": [
+						{
+							"name": "error message for required field",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\",\r\n  \"email\": \"mahan@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"register",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "New user registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan2\",\r\n  \"password\": \"mahan2@123\",\r\n  \"email\": \"mahan2@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 11:58:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"mahan2\",\n    \"email\": \"mahan2@example.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Login and jwt access token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "This endpoint authenticates a user with their username and password and returns a pair of JSON Web Tokens (JWT):  \naccess token – used to authenticate subsequent API requests-\n\nrefresh token – used to obtain a new access token when the current one expires  \nUse this after a user successfully logs in to your application.EndFragment"
+					},
+					"response": [
+						{
+							"name": "error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\"\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "User Login and jwt access token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\"\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 11:57:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NjIzMTg2NiwiaWF0IjoxNzY2MTQ1NDY2LCJqdGkiOiI5MTJjN2IyNDQwNWE0ZWQ2OGFjM2M2OWFiNjIzOWY5YSIsInVzZXJfaWQiOjR9.EPE05MJveUWmzv0hilYFMnMBo63Bs6CiuVCznCvS9SQ\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ1NzY2LCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6ImUyNWIwNzczMDkyMzQ2MjA4OTBlYzRhOTc5YjI3OTdiIiwidXNlcl9pZCI6NH0.dlkwHV4AppdAPktnxMRhAkYE8dWg8MoNQlgdtoxMwHo\"\n}"
+						},
+						{
+							"name": "user refresh token for getting new acccess code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\"\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "user new access token by refresh ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\",\r\n  \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NjIzMTg2NiwiaWF0IjoxNzY2MTQ1NDY2LCJqdGkiOiI5MTJjN2IyNDQwNWE0ZWQ2OGFjM2M2OWFiNjIzOWY5YSIsInVzZXJfaWQiOjR9.EPE05MJveUWmzv0hilYFMnMBo63Bs6CiuVCznCvS9SQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"mahan\",\r\n  \"password\": \"mahan@123\",\r\n  \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NjIzMTg2NiwiaWF0IjoxNzY2MTQ1NDY2LCJqdGkiOiI5MTJjN2IyNDQwNWE0ZWQ2OGFjM2M2OWFiNjIzOWY5YSIsInVzZXJfaWQiOjR9.EPE05MJveUWmzv0hilYFMnMBo63Bs6CiuVCznCvS9SQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/refresh/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										"refresh",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:10:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2NTE2LCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6IjNhMjZkZjEwZWI5ZDQ2MWY4N2UzODFkNTRlMTJmNzVlIiwidXNlcl9pZCI6NH0.32iUaznnvE0Y8dzG169AEP6fy1auF8QBB5c-6CMHRt0\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "retrieving all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Retrieves a list of blog posts.\n\n**Method:** `GET`\n**URL:** `http://127.0.0.1:8000/posts`\n\n### Response\nOn success, this endpoint returns `200 OK` with a JSON array of post objects. Each post has the following fields (based on the latest 200 OK response):\n\n```json\n[\n  {\n    \"id\": 1,\n    \"title\": \"My family photo\",\n    \"content\": \"This my family photo\",\n    \"comments\": [\n      {\n        \"content\": \"nice family\"\n      }\n    ],\n    \"author\": 2,\n    \"created_at\": \"2025-12-10T10:30:56Z\",\n    \"updated_at\": \"2025-12-10T10:31:07.425693Z\"\n  }\n]\n```\n\n### Field descriptions\n- `id` (integer): Unique identifier for the blog post.\n- `title` (string): Title of the blog post.\n- `content` (string): Main text content of the post.\n- `comments` (array): List of comment objects associated with the post.\n  - `content` (string): Text of the comment.\n- `author` (integer): Identifier of the user who created the post.\n- `created_at` (string, ISO 8601 datetime): Timestamp when the post was created.\n- `updated_at` (string, ISO 8601 datetime): Timestamp when the post was last updated."
+					},
+					"response": [
+						{
+							"name": "all posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 11:59:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "767"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"My family photo\",\n        \"content\": \"This my family photo\",\n        \"comments\": [\n            {\n                \"content\": \"nice family\"\n            }\n        ],\n        \"author\": 2,\n        \"created_at\": \"2025-12-10T10:30:56Z\",\n        \"updated_at\": \"2025-12-10T10:31:07.425693Z\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"freinds\",\n        \"content\": \"friends for ever\",\n        \"comments\": [\n            {\n                \"content\": \"testing for update\"\n            }\n        ],\n        \"author\": 2,\n        \"created_at\": \"2025-12-12T09:14:53.031122Z\",\n        \"updated_at\": \"2025-12-12T09:14:53.031122Z\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Trip\",\n        \"content\": \"Munnar kerala\",\n        \"comments\": [\n            {\n                \"content\": \"Nice trip\"\n            }\n        ],\n        \"author\": 2,\n        \"created_at\": \"2025-12-12T09:17:10.422628Z\",\n        \"updated_at\": \"2025-12-12T09:17:10.422628Z\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"testing 2\",\n        \"content\": \"done\",\n        \"comments\": [\n            {\n                \"content\": \"comment testing\"\n            }\n        ],\n        \"author\": 3,\n        \"created_at\": \"2025-12-16T11:12:45.094979Z\",\n        \"updated_at\": \"2025-12-16T11:12:45.094979Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "getting one post from id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "### Get a single blog post by ID\n\nRetrieve the details of a single blog post, including its comments and metadata.\n\n**Method:** `GET`  \n**URL:** `http://127.0.0.1:8000/posts/:id`\n\n#### Path parameters\n- `id` (integer, required): Unique identifier of the post to retrieve.\n\n#### Authentication\nIf your API requires authentication for this endpoint, make sure the correct auth mechanism is configured at the collection or request level (e.g., Bearer token). This request itself does not define auth settings explicitly.\n\n#### Sample request\n```http\nGET http://127.0.0.1:8000/posts/1\nContent-Type: application/json\n```\n\n#### Successful response (200)\nReturns a JSON object with the post data and its comments.\n\n**Response body example:**\n```json\n{\n  \"id\": 1,\n  \"title\": \"My family photo\",\n  \"content\": \"This my family photo\",\n  \"comments\": [\n    { \"content\": \"nice family\" }\n  ],\n  \"author\": 2,\n  \"created_at\": \"2025-12-10T10:30:56Z\",\n  \"updated_at\": \"2025-12-10T10:31:07.425693Z\"\n}\n```\n\n#### Response schema\n- `id` (integer): Unique identifier of the post.\n- `title` (string): Title of the blog post.\n- `content` (string): Main content/body of the blog post.\n- `comments` (array of objects): List of comments associated with this post.\n  - `content` (string): Text of the comment.\n- `author` (integer): ID of the user who created the post.\n- `created_at` (string, date-time): When the post was created (ISO 8601 format).\n- `updated_at` (string, date-time): When the post was last updated (ISO 8601 format)."
+					},
+					"response": [
+						{
+							"name": "id=1 post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:02:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"My family photo\",\n    \"content\": \"This my family photo\",\n    \"comments\": [\n        {\n            \"content\": \"nice family\"\n        }\n    ],\n    \"author\": 2,\n    \"created_at\": \"2025-12-10T10:30:56Z\",\n    \"updated_at\": \"2025-12-10T10:31:07.425693Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "creating a post by authorized user only",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2NTE2LCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6IjNhMjZkZjEwZWI5ZDQ2MWY4N2UzODFkNTRlMTJmNzVlIiwidXNlcl9pZCI6NH0.32iUaznnvE0Y8dzG169AEP6fy1auF8QBB5c-6CMHRt0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"title\": \"testing post\",\r\n        \"content\": \"tested\"\r\n        \r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "## Purpose\nCreate a new blog post. Only authenticated/authorized users are allowed to create posts.\n\n## URL & Method\n- **Method:** `POST`\n- **URL:** `http://127.0.0.1:8000/posts`\n\n## Authentication\n- This endpoint requires a valid access token.\n- Include the token in the `Authorization` header as a Bearer token.\n- Example:\n  ```http\n  Authorization: Bearer <your_jwt_access_token>\n  ```\n\n## Request Headers\n- `Content-Type: application/json`\n- `Authorization: Bearer <your_jwt_access_token>`\n\n## Request Body\nSend a JSON object with the following fields:\n\n| Field    | Type   | Required | Description              | Example           |\n|---------|--------|----------|--------------------------|-------------------|\n| `title` | string | yes      | Title of the blog post   | \"testing post\"   |\n| `content` | string | yes    | Main content of the post | \"tested\"         |\n\n### Sample Request Body\n```json\n{\n  \"title\": \"testing post\",\n  \"content\": \"tested\"\n}\n```\n\n> Note: Other valid sample values (based on known usage) include:\n> - `title`: \"testing 2\", \"just testing\"\n> - `content`: \"done\", \"Done\"\n\n## Successful Response (201 Created)\nOn success, the API returns HTTP **201 Created** with the newly created post object.\n\n### Sample 201 Response\n```json\n{\n  \"id\": 7,\n  \"title\": \"testing post\",\n  \"content\": \"tested\",\n  \"comments\": [],\n  \"author\": 4,\n  \"created_at\": \"2025-12-19T12:11:50.653261Z\",\n  \"updated_at\": \"2025-12-19T12:11:50.653261Z\"\n}\n```\n\n### Response Fields\n- `id` (integer): Unique identifier of the post.\n- `title` (string): Title of the created post.\n- `content` (string): Content of the created post.\n- `comments` (array): List of comments associated with the post (empty when first created).\n- `author` (integer): ID of the user who created the post.\n- `created_at` (string, ISO 8601): Timestamp when the post was created.\n- `updated_at` (string, ISO 8601): Timestamp when the post was last updated."
+					},
+					"response": [
+						{
+							"name": "exmaple",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"title\": \"testing post\",\r\n        \"content\": \"tested\"\r\n        \r\n    }"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:11:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"title\": \"testing post\",\n    \"content\": \"tested\",\n    \"comments\": [],\n    \"author\": 4,\n    \"created_at\": \"2025-12-19T12:11:50.653261Z\",\n    \"updated_at\": \"2025-12-19T12:11:50.653261Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Un-Authorized user post creation not accessed",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"title\": \"My family photo\",\r\n        \"content\": \"Done\"\r\n        \r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "### Create a new blog post\n\nThis endpoint creates a new blog post resource.\n\n- **Method:** `POST`\n- **URL:** `http://127.0.0.1:8000/posts`\n- **Authentication:** JWT Bearer token is required.\n  - Include the token in the `Authorization` header:\n    ```http\n    Authorization: Bearer <your_jwt_access_token>\n    ```\n\n#### Request Headers\n- `Content-Type: application/json`\n- `Authorization: Bearer <your_jwt_access_token>`\n\n#### Request Body\nSend a JSON object with the following fields:\n\n```json\n{\n  \"title\": \"My family photo\",\n  \"content\": \"Done\"\n}\n```\n\n- `title` (string, required): The title of the blog post. Example: `\"My family photo\"`.\n- `content` (string, required): The main content/body of the blog post. Example: `\"Done\"`.\n\n#### Expected Behavior\n- On success (authenticated request with valid data), a new blog post is created.\n- If authentication is missing or invalid, the API returns `401 Unauthorized` with a message similar to:\n  ```json\n  {\n    \"detail\": \"Authentication credentials were not provided.\"\n  }\n  ```"
+					},
+					"response": [
+						{
+							"name": "example 401",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"title\": \"My family photo\",\r\n        \"content\": \"Done\"\r\n        \r\n    }"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:14:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "post update usind post id and user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ2OTM0LCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6ImUxYThjN2NjZTY5NjQ2NjFhZDdkZjhjMTZiZDkzYjgyIiwidXNlcl9pZCI6NH0.5lszIf2bqdad_pUjnWr41ACtLciliP8Tfyw21IUTngo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n       \"title\": \"testing post\",\r\n    \"content\": \"upadted\"\r\n        \r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"7"
+							]
+						},
+						"description": "Updates an existing blog post by its unique ID.\nOnly the post's user can updated\n## Endpoint\n`PUT /posts/{id}`\n\n- **Base URL (local)**: `http://127.0.0.1:8000`\n- **Example**: `PUT http://127.0.0.1:8000/posts/7`\n\n## Purpose\nUse this endpoint to fully update an existing blog post’s title and content. The record is identified by the `id` path parameter.\n\n## URL Parameters\n- **id** (path, integer, required)\n  - The unique identifier of the blog post to update.\n  - Example: `7`\n\n## Authentication\n- **Type**: Bearer token (JWT access token)\n- **Header**:\n  - `Authorization: Bearer <your_access_token>`\n- Requests without a valid token will typically be rejected with an authorization error (e.g., 401/403).\n\n## Request Headers\n- `Content-Type: application/json`\n\n## Request Body\nSend a JSON object with the updated fields.\n\n### Schema\n```json\n{\n  \"title\": \"string\",\n  \"content\": \"string\"\n}\n```\n\n### Field Details\n- **title** (string, required)\n  - New title for the blog post.\n  - Example values: `\"My family photo\"`, `\"just testing\"`.\n\n- **content** (string, required)\n  - Updated content/body of the blog post.\n  - Example values: `\"content changed for testing\"`, `\"updation done\"`.\n\n### Example Payload\n```json\n{\n  \"title\": \"testing post\",\n  \"content\": \"upadted\"\n}\n```\n\n## Successful Response (200 OK)\nOn success, the API returns HTTP **200 OK** and a JSON object representing the updated post, including metadata.\n\n### Example 200 Response\n```json\n{\n  \"id\": 7,\n  \"title\": \"testing post\",\n  \"content\": \"upadted\",\n  \"comments\": [],\n  \"author\": 4,\n  \"created_at\": \"2025-12-19T12:11:50.653261Z\",\n  \"updated_at\": \"2025-12-19T12:11:50.653261Z\"\n}\n```\n\n- `id`: ID of the updated post.\n- `comments`: List of associated comments (empty array if none).\n- `author`: The user ID of the author.\n- `created_at` / `updated_at`: Timestamps in ISO 8601 format."
+					},
+					"response": [
+						{
+							"name": "200 ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n       \"title\": \"testing post\",\r\n    \"content\": \"upadted\"\r\n        \r\n    }"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:21:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"title\": \"testing post\",\n    \"content\": \"upadted\",\n    \"comments\": [],\n    \"author\": 4,\n    \"created_at\": \"2025-12-19T12:11:50.653261Z\",\n    \"updated_at\": \"2025-12-19T12:11:50.653261Z\"\n}"
+						},
+						{
+							"name": "401 forbidden",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n       \"title\": \"testing post\",\r\n    \"content\": \"upadted\"\r\n        \r\n    }"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "post delete by user id and post id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTQ3NjQwLCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6IjIyMzRiMjUxOTAwMjRhNDI5NmYzMTBiOWI1Y2UxM2UyIiwidXNlcl9pZCI6NH0.U9C-HBgL1m9niOjplmByOIwTg1uSVfcnb3iGqo1EEEw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"7"
+							]
+						},
+						"description": "### Delete a Blog Post by ID\n\nThis endpoint deletes a single blog post identified by its numeric ID.\n\n- **Method:** `DELETE`\n    \n- **URL:** `http://127.0.0.1:8000/posts/{id}`\n    \n    - Example in this request: `http://127.0.0.1:8000/posts/7`\n        \n\n### Authorization\n\nThis operation requires an authenticated user.\n\n- **Auth type:** Bearer token (JWT access token)\n    \n- **Header:**\n    \n    - `Authorization: Bearer`\n        \n\nIf the token is missing, expired, or invalid, the API will return an authorization error (4xx).\n\n### Request\n\n- **Path parameter:**\n    \n    - `id` (integer, required) — ID of the post to delete.\n        \n- **Request body:** Not required for this DELETE request.\n    \n\n### Responses & Examples\n\nThis request has saved examples that illustrate typical outcomes:\n\n1. **Post deleted successfully**\n    \n    - Example: **“post deleted by user id and post 7”**\n        \n    - Indicates that the authenticated user successfully deleted post with ID `7`.\n        \n    - Typical status: `204 No Content` (or `200 OK` with a confirmation payload, depending on implementation).\n        \n2. **Post not found**\n    \n    - Example: **“deleted post not found”**\n        \n    - Returned when the specified `id` does not correspond to an existing post (already deleted or never existed).\n        \n    - Typical status: `404 Not Found`.\n        \n\n### Usage Notes\n\n- Ensure you are sending a valid JWT access token in the `Authorization` header.\n    \n- Only authorized users (for example, the owner of the post or an admin, depending on your backend rules) are allowed to delete posts.\n    \n- Use the **“post deleted by user id and post 7”** example to see the expected behavior for a successful delete, and **“deleted post not found”** to understand the not-found scenario."
+					},
+					"response": [
+						{
+							"name": "deleted post not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "post deleted by user id and post 7",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"7"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:29:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "Getting all comments with out autherizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Retrieves all comments in the blog application.\n\n**Endpoint**\n- **Method:** `GET`\n- **URL:** `http://127.0.0.1:8000/comments`\n\n**Successful Response (200 OK)**\nReturns a JSON array of comment objects. Each comment has the following fields:\n\n```json\n[\n  {\n    \"id\": 1,\n    \"post\": 1,\n    \"author\": 2,\n    \"content\": \"nice family\",\n    \"created_at\": \"2025-12-10T10:31:43.149917Z\",\n    \"updated_at\": \"2025-12-10T10:31:43.149917Z\"\n  }\n]\n```\n\n**Field descriptions**\n- `id` (integer): Unique identifier for the comment.\n- `post` (integer): ID of the post this comment belongs to.\n- `author` (integer): ID of the user who created the comment.\n- `content` (string): The text content of the comment.\n- `created_at` (string, ISO 8601): Timestamp when the comment was created.\n- `updated_at` (string, ISO 8601): Timestamp of the last update to the comment.\n\n**Usage notes**\n- Use this endpoint to list all comments, for example to display them in an admin dashboard or for debugging.\n- No request body or query parameters are required for a basic fetch of all comments."
+					},
+					"response": [
+						{
+							"name": "201 ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Dec 2025 12:32:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "566"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"post\": 1,\n        \"author\": 2,\n        \"content\": \"nice family\",\n        \"created_at\": \"2025-12-10T10:31:43.149917Z\",\n        \"updated_at\": \"2025-12-10T10:31:43.149917Z\"\n    },\n    {\n        \"id\": 2,\n        \"post\": 4,\n        \"author\": 2,\n        \"content\": \"Nice trip\",\n        \"created_at\": \"2025-12-12T09:49:31.811852Z\",\n        \"updated_at\": \"2025-12-12T09:49:31.811852Z\"\n    },\n    {\n        \"id\": 3,\n        \"post\": 3,\n        \"author\": 3,\n        \"content\": \"testing for update\",\n        \"created_at\": \"2025-12-16T11:05:11.041356Z\",\n        \"updated_at\": \"2025-12-16T11:05:11.041356Z\"\n    },\n    {\n        \"id\": 4,\n        \"post\": 6,\n        \"author\": 3,\n        \"content\": \"comment testing\",\n        \"created_at\": \"2025-12-16T11:14:02.358745Z\",\n        \"updated_at\": \"2025-12-16T11:14:02.358745Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Creating new comment for user post from unique id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"testing comment for post and user \",\r\n    \"post\":8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments"
+							]
+						},
+						"description": "### Create Comment for Blog Post\n\nCreates a new comment for a specific blog post.\n\n#### Request\n- **Method:** `POST`\n- **URL:** `http://127.0.0.1:8000/comments`\n- **Authentication:** Requires an authenticated user (the `author` field in the response is derived from the authenticated user).\n- **Body Type:** `raw` JSON\n\n#### Request Body (JSON)\n```json\n{\n  \"content\": \"testing comment for post and user \",\n  \"post\": 8\n}\n```\n\n**Required fields:**\n- `content` (string): The text content of the comment.\n- `post` (integer): The ID of the blog post this comment belongs to.\n\n#### Successful Response\n- **Status:** `201 Created`\n\n**Response Body (JSON)**\n```json\n{\n  \"id\": 5,\n  \"post\": 8,\n  \"author\": 4,\n  \"content\": \"testing comment for post and user\",\n  \"created_at\": \"2025-12-20T07:44:05.789364Z\",\n  \"updated_at\": \"2025-12-20T07:44:05.789364Z\"\n}\n```\n\n**Response fields:**\n- `id` (integer): Unique identifier of the comment.\n- `post` (integer): ID of the associated blog post.\n- `author` (integer): ID of the user who created the comment.\n- `content` (string): Text content of the comment.\n- `created_at` (string, datetime): Timestamp when the comment was created.\n- `updated_at` (string, datetime): Timestamp when the comment was last updated."
+					},
+					"response": [
+						{
+							"name": "201 ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"testing comment for post and user \",\r\n    \"post\":8\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 20 Dec 2025 07:44:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"post\": 8,\n    \"author\": 4,\n    \"content\": \"testing comment for post and user\",\n    \"created_at\": \"2025-12-20T07:44:05.789364Z\",\n    \"updated_at\": \"2025-12-20T07:44:05.789364Z\"\n}"
+						},
+						{
+							"name": "Creating comment for other user post also using post id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"testing comment for post and user \",\r\n    \"post\":8\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "comment upadte by aunthorized user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"post\": 8,\r\n\"content\": \"testing comment for post and user( testing for updataion)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
+								"5"
+							]
+						},
+						"description": "Updataion of comment content for id 5 and user 8\n\nstatus code : 201 ok"
+					},
+					"response": [
+						{
+							"name": "201 ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"post\": 8,\r\n\"content\": \"testing comment for post and user( testing for updataion)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 20 Dec 2025 07:51:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"post\": 8,\n    \"author\": 4,\n    \"content\": \"testing comment for post and user( testing for updataion)\",\n    \"created_at\": \"2025-12-20T07:51:08.814374Z\",\n    \"updated_at\": \"2025-12-20T07:51:08.814374Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Un-Authorized user can update other user comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"post\": 8,\r\n\"content\": \"testing comment for post and user( testing for updataion)\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
+								"5"
+							]
+						},
+						"description": "This is the example of non user can not able to update the other user comment\n\n  \nsame for deleting and creting also"
+					},
+					"response": [
+						{
+							"name": "401 unauthorized",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"post\": 8,\r\n\"content\": \"testing comment for post and user( testing for updataion)\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments",
+										"5"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 20 Dec 2025 07:58:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Authorized user can delete their comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/comments/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"comments",
+								"5"
+							]
+						},
+						"description": "Authorized user can delete the comment"
+					},
+					"response": [
+						{
+							"name": "204 no content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/comments/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"comments",
+										"5"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 20 Dec 2025 08:01:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MjE3OTQ0LCJpYXQiOjE3NjYxNDU0NjYsImp0aSI6IjczZDc5MGI3ZWFjZjQ4MmY5NDI0NzY4OTBlNmEyOGVhIiwidXNlcl9pZCI6NH0.aRVIsiqgzKObXJgw0HR3973eyWDFols0gawIRuwzMHQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
